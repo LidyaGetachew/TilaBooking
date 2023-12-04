@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../components/Tour/Header'
-import HeroSection from '../components/Tour/HeroSection'
+import Header from '../components/Header'
+import HeroSection from '../components/HeroSection'
 import { Grid,Stack,Typography} from '@mui/material'
 
 import TourIcon from '@mui/icons-material/Tour';
