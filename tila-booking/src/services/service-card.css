@@ -4,7 +4,13 @@
    border-right : 1px solid #faa83586;
    border-radius: 0.5rem;
 }
-
+.service__item_big {
+   transition: background-color 0.3s;
+ }
+ 
+ .service__item_big:hover {
+   background-color: #faa83586; /* Change this to the desired hover background color */
+ }
 .service__img {
    width          : 50px;
    height         : 50px;
@@ -21,6 +27,7 @@
 .service__img img {
    width: 100%;
 }
+
 
 .service__item h6 {
    font-size  : 1.1rem;

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from 'react'
 import '../styles/tour-details.css'
-// import tourData from '../assets/data/tours'
+import tourData from '../assets/data/tours'
 import { Container, Row, Col, Form, ListGroup } from 'reactstrap'
 import { useParams } from 'react-router-dom'
 import calculateAvgRating from '../utils/avgRating'
@@ -18,9 +18,11 @@ const TourDetails = () => {
    const { user } = useContext(AuthContext)
 
    // fetch data from database
-   const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`)
+   // const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`)
+   const tour = tourData.find(tour => tour.id === String(id));
+   const [loading,error] = [false,false]
 
-   const { photo, title, desc, price, reviews, city, address, distance, maxGroupSize } = tour
+   const {photo, title, desc, price, reviews, city, address, distance, maxGroupSize } = tour
 
    const { totalRating, avgRating } = calculateAvgRating(reviews)
 

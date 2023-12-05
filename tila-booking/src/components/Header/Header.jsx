@@ -11,7 +11,7 @@ const nav__links = [
       display: 'Home'
    },
    {
-      path: '/our_services',
+      path: '/services',
       display: 'Services',
    },
    {
@@ -21,10 +21,6 @@ const nav__links = [
    {
       path: '/about',
       display: 'About'
-   },
-   {
-      path: '/tours',
-      display: 'Tours'
    },
    {
       path: '/contact us',
@@ -37,6 +33,12 @@ const Header = () => {
    const menuRef = useRef(null)
    const navigate = useNavigate()
    const { user, dispatch } = useContext(AuthContext)
+
+   // const [showSubcategories, setShowSubcategories] = useState(false);
+
+   // const toggleSubcategories = () => {
+   //    setShowSubcategories(!showSubcategories);
+   // };
 
    const logout = () => {
       dispatch({ type: 'LOGOUT' })
@@ -79,6 +81,7 @@ const Header = () => {
                            nav__links.map((item, index) => (
                               <li className="nav__item" key={index}>
                                  <NavLink to={item.path} className={navClass => navClass.isActive ? 'active__link' : ''}>{item.display}</NavLink>
+
                               </li>
                            ))
                         }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import CommonSection from '../shared/CommonSection'
-// import tourData from '../assets/data/tours'
+import tourData from '../assets/data/tours'
 import '../styles/tour.css'
 import TourCard from './../shared/TourCard'
 import SearchBar from './../shared/SearchBar'
@@ -14,8 +14,10 @@ const Tours = () => {
    const [pageCount, setPageCount] = useState(0)
    const [page, setPage] = useState(0)
 
-   const { data: tours, loading, error } = useFetch(`${BASE_URL}/tours?page=${page}`)
-   const { data: tourCount } = useFetch(`${BASE_URL}/tours/search/getTourCount`)
+   // const { data: tours, loading, error } = useFetch(`${BASE_URL}/tours?page=${page}`)
+   // const { data: tourCount } = useFetch(`${BASE_URL}/tours/search/getTourCount`)
+   const [tours,tourCount] = [tourData,tourData.length]
+   let [loading, error] = [false, false];
 
    useEffect(() => {
       const pages = Math.ceil(tourCount / 8)

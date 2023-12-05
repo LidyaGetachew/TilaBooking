@@ -95,7 +95,7 @@ const Home = () => {
       {/* ========== FEATURED TOUR SECTION END =========== */}
 
       {/* ========== EXPERIENCE SECTION START ============ */}
-      <section>
+      {/* <section>
          <Container>
             <Row>
                <Col lg='6'>
@@ -128,7 +128,7 @@ const Home = () => {
                </Col>
             </Row>
          </Container>
-      </section>
+      </section> */}
       {/* ========== EXPERIENCE SECTION END ============== */}
 
       {/* ========== GALLERY SECTION START ============== */}
@@ -147,7 +147,7 @@ const Home = () => {
       </section>
       {/* ========== GALLERY SECTION END ================ */}
 
-      {/* ========== TESTIMONIAL SECTION START ================ */}
+      {/* ========== TESTIMONIAL SECTION START ================
       <section>
          <Container>
             <Row>
@@ -160,9 +160,9 @@ const Home = () => {
                </Col>
             </Row>
          </Container>
-      </section>
+      </section> */}
       {/* ========== TESTIMONIAL SECTION END ================== */}
-      <NewsLetter />
+      {/* <NewsLetter /> */}
    </>
 }
 

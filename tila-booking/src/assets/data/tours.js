@@ -159,6 +159,21 @@ const tours = [
     photo: tourImg03,
     featured: false,
   },
+  {
+    id: "08",
+    title: "Snowy Mountains, Thailand",
+    city: "Thailand",
+    distance: 500,
+    address: 'SomeWhere',
+    price: 99,
+    maxGroupSize: 8,
+    desc: "this is the description",
+    reviews: [
+    ],
+    avgRating: 4.5,
+    photo: tourImg03,
+    featured: false,
+  },
 ];
 
 export default tours;

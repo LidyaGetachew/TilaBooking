@@ -6,7 +6,7 @@ import calculateAvgRating from '../utils/avgRating'
 
 const TourCard = ({ tour }) => {
 
-   const { _id, title, city, photo, price, featured, reviews } = tour
+   const { id, title, city, photo, price, featured, reviews } = tour
 
    const { totalRating, avgRating } = calculateAvgRating(reviews)
 
@@ -30,7 +30,7 @@ const TourCard = ({ tour }) => {
                   </span>
                </div>
 
-               <h5 className='tour__title'><Link to={`/tours/${_id}`}>{title}</Link></h5>
+               <h5 className='tour__title'><Link to={`/tours/${id}`}>{title}</Link></h5>
 
                <div className="card__bottom d-flex align-items-center justify-content-between mt-3">
                   <h5>${price} <span> /per person</span></h5>
@@ -38,7 +38,7 @@ const TourCard = ({ tour }) => {
                   {/* <button className=' booking__btn'>
                      <Link to={`/tours/${_id}`}>Book Now</Link>
                   </button> */}
-                  <Link to={`/tours/${_id}`}>
+                  <Link to={`/tours/${id}`}>
                      <button className=' booking__btn'>Book Now</button>
                   </Link>
                </div>

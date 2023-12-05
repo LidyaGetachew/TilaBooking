@@ -4,20 +4,22 @@ import { Col } from 'reactstrap'
 import weatherImg from '../assets/images/weather.png'
 import guideImg from '../assets/images/guide.png'
 import customizationImg from '../assets/images/customization.png'
-
+import hotelIcon from "../assets/images/hotel.png"
+import tourIcon from "../assets/images/tours.png"
+import carIcon from "../assets/images/car.png"
 const servicesData = [
    {
-      imgUrl: weatherImg,
+      imgUrl: tourIcon,
       title: `Personalized Activities`,
       desc: `Enjoy a wide range of personalized activities tailored just for you, from adventurous hikes to relaxing spa treatments.`,
    },
    {
-      imgUrl: guideImg,
+      imgUrl: hotelIcon,
       title: `Luxurious Accommodations`,
       desc: `Discover our collection of luxurious hotels with breathtaking views and exceptional service for an unforgettable stay.`,
    },
    {
-      imgUrl: customizationImg,
+      imgUrl: carIcon,
       title: 'Seamless Travel',
       desc: `Enjoy a wide range of personalized activities tailored just for you, from adventurous hikes to relaxing spa treatments.`,
    },
