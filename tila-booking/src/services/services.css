@@ -1,0 +1,37 @@
+/* services.css */
+
+.service-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  
+  }
+  .service-box {
+    padding      : 1rem;
+    border-bottom: 1px solid #faa83586;
+    border-right : 1px solid #faa83586;
+    border-radius: 0.5rem;
+ }
+
+  .service-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .service-image img {
+      margin-right: 0;
+    }
+} 
+  .service-description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .service-description p {
+    font-size: 16px;
+    line-height: 1.5;
+  
+}
