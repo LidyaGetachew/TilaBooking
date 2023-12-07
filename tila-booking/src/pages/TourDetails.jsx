@@ -10,6 +10,7 @@ import Newsletter from '../shared/Newsletter'
 import useFetch from '../hooks/useFetch'
 import { BASE_URL } from '../utils/config'
 import { AuthContext } from '../context/AuthContext'
+import TourDescription from '../components/Tour/TourDescription'
 
 const TourDetails = () => {
    const { id } = useParams()
@@ -94,8 +95,7 @@ const TourDetails = () => {
                               <span><i class='ri-map-pin-time-line'></i> {distance} k/m</span>
                               <span><i class='ri-group-line'></i> {maxGroupSize} people</span>
                            </div>
-                           <h5>Description</h5>
-                           <p>{desc}</p>
+                           <TourDescription desc={desc}/>
                         </div>
 
                         {/* ============ TOUR REVIEWS SECTION START ============ */}

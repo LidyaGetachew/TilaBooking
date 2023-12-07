@@ -15,7 +15,27 @@ const tours = [
     address: 'SomeWhere',
     price: 99,
     maxGroupSize: 10,
-    desc: "this is the description",
+    desc: {
+      overview: "This tour takes you to Bali, Indonesia.",
+      itinerary: "Experience the beautiful beaches, explore the local culture, and indulge in delicious cuisine.",
+      cost: {
+        included: ["Accommodation", "transportation within Bali"],
+        notIncluded: ["Flights to Bali"],
+      },
+      FAQs: [
+        {
+          question: "What is included in the tour?",
+          answer: "The tour includes accommodation and transportation within Bali.",
+        },
+        {
+          question: "Are flights to Bali included?",
+          answer: "No, flights to Bali are not included.",
+        },
+      ],
+      Map:  {
+        latitude: 51.5007,
+        longitude: -0.1246,
+      }    },
     reviews: [
       {
         name: "jhon doe",
@@ -38,7 +58,27 @@ const tours = [
     address: 'SomeWhere',
     price: 96,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: {
+      overview: "This tour takes you to Bali, Indonesia.",
+      itinerary: "Experience the beautiful beaches, explore the local culture, and indulge in delicious cuisine.",
+      cost: {
+        included: ["Accommodation", "transportation within Bali"],
+        notIncluded: ["Flights to Bali"],
+      },
+      FAQs: [
+        {
+          question: "What is included in the tour?",
+          answer: "The tour includes accommodation and transportation within Bali.",
+        },
+        {
+          question: "Are flights to Bali included?",
+          answer: "No, flights to Bali are not included.",
+        },
+      ],
+      Map:  {
+        latitude: 51.5007,
+        longitude: -0.1246,
+      }    },
     reviews: [
       {
         name: "jhon doe",
@@ -57,7 +97,27 @@ const tours = [
     address: 'SomeWhere',
     price: 76,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: {
+      overview: "This tour takes you to Bali, Indonesia.",
+      itinerary: "Experience the beautiful beaches, explore the local culture, and indulge in delicious cuisine.",
+      cost: {
+        included: ["Accommodation", "transportation within Bali"],
+        notIncluded:[ "Flights to Bali"],
+      },
+      FAQs: [
+        {
+          question: "What is included in the tour?",
+          answer: "The tour includes accommodation and transportation within Bali.",
+        },
+        {
+          question: "Are flights to Bali included?",
+          answer: "No, flights to Bali are not included.",
+        },
+      ],
+      Map:  {
+        latitude: 51.5007,
+        longitude: -0.1246,
+      }    },
     reviews: [
       {
         name: "jhon doe",
@@ -76,7 +136,27 @@ const tours = [
     address: 'SomeWhere',
     price: 85,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: {
+      overview: "This tour takes you to Bali, Indonesia.",
+      itinerary: "Experience the beautiful beaches, explore the local culture, and indulge in delicious cuisine.",
+      cost: {
+        included: ["Accommodation", "transportation within Bali"],
+        notIncluded: ["Flights to Bali"],
+      },
+      FAQs: [
+        {
+          question: "What is included in the tour?",
+          answer: "The tour includes accommodation and transportation within Bali.",
+        },
+        {
+          question: "Are flights to Bali included?",
+          answer: "No, flights to Bali are not included.",
+        },
+      ],
+      Map:  {
+        latitude: 51.5007,
+        longitude: -0.1246,
+      }    },
     reviews: [
       {
         name: "jhon doe",
@@ -95,7 +175,27 @@ const tours = [
     address: 'SomeWhere',
     price: 75,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: {
+      overview: "This tour takes you to Bali, Indonesia.",
+      itinerary: "Experience the beautiful beaches, explore the local culture, and indulge in delicious cuisine.",
+      cost: {
+        included: ["Accommodation", "transportation within Bali"],
+        notIncluded: ["Flights to Bali"],
+      },
+      FAQs: [
+        {
+          question: "What is included in the tour?",
+          answer: "The tour includes accommodation and transportation within Bali.",
+        },
+        {
+          question: "Are flights to Bali included?",
+          answer: "No, flights to Bali are not included.",
+        },
+      ],
+      Map:  {
+        latitude: 51.5007,
+        longitude: -0.1246,
+      }    },
     reviews: [
       {
         name: "jhon doe",
@@ -114,7 +214,27 @@ const tours = [
     address: 'SomeWhere',
     price: 88,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: {
+      overview: "This tour takes you to Bali, Indonesia.",
+      itinerary: "Experience the beautiful beaches, explore the local culture, and indulge in delicious cuisine.",
+      cost: {
+        included: ["Accommodation", "transportation within Bali"],
+        notIncluded: ["Flights to Bali"],
+      },
+      FAQs: [
+        {
+          question: "What is included in the tour?",
+          answer: "The tour includes accommodation and transportation within Bali.",
+        },
+        {
+          question: "Are flights to Bali included?",
+          answer: "No, flights to Bali are not included.",
+        },
+      ],
+      Map:  {
+        latitude: 51.5007,
+        longitude: -0.1246,
+      }    },
     reviews: [
       {
         name: "jhon doe",
@@ -133,7 +253,27 @@ const tours = [
     address: 'SomeWhere',
     price: 79,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: {
+      overview: "This tour takes you to Bali, Indonesia.",
+      itinerary: "Experience the beautiful beaches, explore the local culture, and indulge in delicious cuisine.",
+      cost: {
+        included: ["Accommodation", "transportation within Bali"],
+        notIncluded: ["Flights to Bali"],
+      },
+      FAQs: [
+        {
+          question: "What is included in the tour?",
+          answer: "The tour includes accommodation and transportation within Bali.",
+        },
+        {
+          question: "Are flights to Bali included?",
+          answer: "No, flights to Bali are not included.",
+        },
+      ],
+      Map:  {
+        latitude: 51.5007,
+        longitude: -0.1246,
+      }    },
     reviews: [
       {
         name: "jhon doe",
@@ -152,7 +292,28 @@ const tours = [
     address: 'SomeWhere',
     price: 99,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: {
+      overview: "This tour takes you to Bali, Indonesia.",
+      itinerary: "Experience the beautiful beaches, explore the local culture, and indulge in delicious cuisine.",
+      cost: {
+        included: ["Accommodation", "transportation within Bali"],
+        notIncluded: ["Flights to Bali"],
+      },
+      FAQs: [
+        {
+          question: "What is included in the tour?",
+          answer: "The tour includes accommodation and transportation within Bali.",
+        },
+        {
+          question: "Are flights to Bali included?",
+          answer: "No, flights to Bali are not included.",
+        },
+      ],
+      Map:  {
+        latitude: 51.5007,
+        longitude: -0.1246,
+      }
+    },
     reviews: [
     ],
     avgRating: 4.5,
@@ -167,7 +328,28 @@ const tours = [
     address: 'SomeWhere',
     price: 99,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: {
+      overview: "This tour takes you to Bali, Indonesia.",
+      itinerary: "Experience the beautiful beaches, explore the local culture, and indulge in delicious cuisine.",
+      cost: {
+        included: ["Accommodation", "transportation within Bali"],
+        notIncluded: ["Flights to Bali"],
+      },
+      FAQs: [
+        {
+          question: "What is included in the tour?",
+          answer: "The tour includes accommodation and transportation within Bali.",
+        },
+        {
+          question: "Are flights to Bali included?",
+          answer: "No, flights to Bali are not included.",
+        },
+      ],
+      Map:  {
+        latitude: 51.5007,
+        longitude: -0.1246,
+      }
+    },
     reviews: [
     ],
     avgRating: 4.5,
