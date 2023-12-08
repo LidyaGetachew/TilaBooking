@@ -1,0 +1,8 @@
+.custom-tabs .MuiTabs-indicator  {
+    background-color: var(--secondary-color); 
+  }
+
+  .custom-tabs  .MuiTab-root.Mui-selected{
+    color:var(--primary-color)
+  }
+  

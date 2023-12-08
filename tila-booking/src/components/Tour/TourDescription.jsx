@@ -4,6 +4,7 @@ import { Tab, Accordion, AccordionSummary, Typography } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
+import "./TourDescription.css"
 
 const TourDescription = ({ desc }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -20,7 +21,7 @@ const TourDescription = ({ desc }) => {
   return (
     <div>
       <TabContext value={activeTab}>
-        <TabList value={activeTab}  style={{
+        <TabList value={activeTab}  className="custom-tabs"style={{
         display: "flex",
         overflowX: "auto",
         width: "100%",
