@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import CommonSection from '../shared/CommonSection'
-import tourData from '../assets/data/tours'
+import hotelData from '../assets/data/hotels'
 import '../styles/tour.css'
-import TourCard from './../shared/TourCard'
-import SearchBar from "../components/Hotel/HotelSearchBar"
 import Newsletter from './../shared/Newsletter'
 import { Col, Container, Row } from 'reactstrap'
 import useFetch from '../hooks/useFetch'
 import { BASE_URL } from '../utils/config'
 import HotelSearchBar from '../components/Hotel/HotelSearchBar'
+import HotelCard from '../shared/HotelCard'
+import PopularHotelsCard from '../shared/PopularHotelsCard'
 
 
 const Hotels = () => {
@@ -17,14 +17,14 @@ const Hotels = () => {
 
    // const { data: tours, loading, error } = useFetch(`${BASE_URL}/tours?page=${page}`)
    // const { data: tourCount } = useFetch(`${BASE_URL}/tours/search/getTourCount`)
-   const [tours,tourCount] = [tourData,tourData.length]
+   const [hotels,hotelsCount] = [hotelData,hotelData.length]
    let [loading, error] = [false, false];
 
    useEffect(() => {
-      const pages = Math.ceil(tourCount / 8)
+      const pages = Math.ceil(hotelsCount / 8)
       setPageCount(pages)
       window.scrollTo(0,0)
-   }, [page, tourCount, tours])
+   }, [page, hotelsCount, hotels])
 
    return (
       <>
@@ -44,9 +44,13 @@ const Hotels = () => {
                {
                   !loading && !error &&
                   <Row>
+                     <PopularHotelsCard hotels={hotels} name={"Ethiopia"} />
+                     <PopularHotelsCard hotels={hotels} name={"USA"} />
+                     <h4>All Hotels</h4>
                      {
-                        tours?.map(tour => (<Col lg='3' md='6' sm='6' className='mb-4' key={tour._id}> <TourCard tour={tour} /> </Col>))
+                        hotels?.map(hotel => (<Col lg='3' md='6' sm='6' className='mb-4' key={hotel._id}> <HotelCard hotel={hotel} /> </Col>))
                      }
+                     
 
                      <Col lg='12'>
                         <div className="pagination d-flex align-items-center justify-content-center mt-4 gap-3">
