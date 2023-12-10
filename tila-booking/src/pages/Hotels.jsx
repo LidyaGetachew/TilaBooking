@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import CommonSection from '../shared/CommonSection'
 import hotelData from '../assets/data/hotels'
 import '../styles/tour.css'
+import '../components/Hotel/hotels.css'
 import Newsletter from './../shared/Newsletter'
 import { Col, Container, Row } from 'reactstrap'
 import useFetch from '../hooks/useFetch'
@@ -9,6 +10,10 @@ import { BASE_URL } from '../utils/config'
 import HotelSearchBar from '../components/Hotel/HotelSearchBar'
 import HotelCard from '../shared/HotelCard'
 import PopularHotelsCard from '../shared/PopularHotelsCard'
+import FeaturedHotels from '../components/Hotel/featured-hotels/FeaturedHotels'
+import PropertyList from '../components/Hotel/PropertyList/PropertyList'
+import FeaturedProperties from '../components/Hotel/featured-properties/FeaturedProperties'
+import NewsLetter from './../shared/Newsletter'
 
 
 const Hotels = () => {
@@ -33,11 +38,26 @@ const Hotels = () => {
             <Container>
                <Row>
                   <HotelSearchBar />
+                  <div className='homecontainer'>
+                     <FeaturedHotels />
+                     <h1 className="homeTitle">Browse by Propeerty type</h1>
+                     <PropertyList />
+                     <h1 className="homeTitle">Homes guests love</h1>
+                     <FeaturedProperties />
+                     <NewsLetter />
+
+                   </div>
                </Row>
             </Container>
          </section>
 
-         <section className='pt-0'>
+      </>
+   )
+}
+
+export default Hotels
+
+         {/* <section className='pt-0'>
             <Container>
                {loading && <h4 className='text-center pt-5'>LOADING..........</h4>}
                {error && <h4 className='text-center pt-5'>{error}</h4>}
@@ -67,9 +87,4 @@ const Hotels = () => {
                }
             </Container>
          </section>
-         <Newsletter />
-      </>
-   )
-}
-
-export default Hotels
+         <Newsletter /> */}

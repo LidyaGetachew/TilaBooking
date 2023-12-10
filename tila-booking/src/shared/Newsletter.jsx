@@ -10,7 +10,7 @@ const NewsLetter = () => {
             <Row>
                <Col lg='6'>
                   <div className="newsletter__content">
-                     <h2>Subcribe now to get useful traveling information</h2>
+                     <h2>Subcribe now to get useful informations</h2>
 
                      <div className="newsletter__input">
                         <input type="email" placeholder='Enter your email' />
