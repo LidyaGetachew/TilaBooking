@@ -10,6 +10,8 @@ import Tours from './../pages/Tours'
 import Services from '../pages/Services'
 import Hotels from '../pages/Hotels'
 import Hotel from "../pages/Hotel"
+import HotelList from "../components/Hotel/HotelList/List"
+
 
 const Routers = () => {
    return (
@@ -25,6 +27,8 @@ const Routers = () => {
          <Route path='/register' element={<Register/>} />
          <Route path='/thank-you' element={<ThankYou/>} />
          <Route path='/tours/search' element={<SearchResultList/>} />
+         <Route path='/hotel/list' element={<HotelList/>} />
+
       </Routes>
    )
 }
