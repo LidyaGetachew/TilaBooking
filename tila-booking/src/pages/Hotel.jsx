@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import NewsLetter from "../shared/Newsletter";
+import ReservationTable from "../components/Hotel/reservation-table/ReservationTable";
 
 const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
@@ -132,6 +133,7 @@ const Hotel = () => {
             </div>
           </div>
         </div>
+        <ReservationTable/>
         <NewsLetter />
       </div>
     </div>
