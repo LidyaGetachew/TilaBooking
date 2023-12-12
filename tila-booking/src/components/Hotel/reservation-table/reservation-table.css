@@ -1,7 +1,7 @@
-.container {
+ .table-container {
     display: flex;
     align-items: flex-start;
-    }
+    } 
     
  .reserve {
     margin-left: auto;
@@ -63,4 +63,4 @@
   }
   .reserve div{
     margin-top: 10px;
-  }
+  } 

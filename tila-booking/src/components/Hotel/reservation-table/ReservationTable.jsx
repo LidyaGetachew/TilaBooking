@@ -132,7 +132,7 @@ const ReservationTable = () => {
     };
   
     return (
-      <Container className="container">
+      <Container className="table-container">
         <table className="reservation-table">
           <thead>
             <tr>
@@ -141,7 +141,6 @@ const ReservationTable = () => {
               <th>Price per Night</th>
               <th style={{ width: '20%' }}>Choices</th>
               <th style={{ width: '5%' }}>Select Rooms</th>
-              <th>Reserve</th>
             </tr>
           </thead>
           <tbody>
