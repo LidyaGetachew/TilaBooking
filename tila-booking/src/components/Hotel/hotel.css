@@ -149,3 +149,166 @@
     color: lightgray;
     cursor: pointer;
   }
+
+  .popular-facilities{
+    max-width: 50%;
+  }
+
+  .facility{
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    margin: 5px;
+    font-size: small;
+  }
+  .small-title{
+    font-weight: bolder;
+  }
+  .guest-reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .medium-title{
+    font-size:23px;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .review-summary{
+    margin-top: 10px;
+    display: flex;
+    gap:10px;
+    align-items: center;
+  }
+  .rating-value{
+    padding:5px 7px;
+    background-color: var(--primary-color);
+    color:white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .gray-text{
+    color:var(--text-color)
+  }
+  .review-categories{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  .review-category{
+    width: 300px;
+    padding: 10px 10px;
+    margin: 5px;
+  }
+  .review-category-info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight:600
+  }
+ 
+  .custom-progress-bar .MuiLinearProgress-bar {
+    background-color: var(--secondary-color);
+
+  }
+  
+  .question-answer-card {
+    border: 1px solid #e0e0e0;
+    padding: 16px;
+    margin: 16px;
+
+  }
+  
+  .question {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+  } 
+  
+  .question-icon {
+    margin-right: 8px;
+    color: #f44336; /* Customize the color as needed */
+  }
+  
+  .answer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .answer-icon {
+    margin-right: 8px;
+    color: #4caf50; /* Customize the color as needed */
+  }
+
+  
+  .hotel-area-info{
+    border: 1px solid rgb(182, 178, 178);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding:20px;
+  }
+  .nearby-container{
+    width: 450px;
+    font-size: 13px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .nearby-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+  }
+
+  .facilities-container{
+    font-size: 13px;
+     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding:20px;
+    height:700px;
+  }
+  .facility-item{
+    padding: 10px;
+    width: fit-content;
+
+  }
+  .facility-item li{
+    color:#555
+  }
+  .house-rules{
+    padding: 10px;
+  }
+  .house-rules table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: smaller;
+  }
+
+  
+  .house-rules table td {
+    min-width: 300px;
+    padding: 12px;
+  }
+  .house-rules table tr{
+    border: 1px solid #ddd;
+
+  }
+  .faq-table{
+    background-color: var(--secondary-color);
+    font-size: 14px;
+  }
+  .faq-table tr{
+    border: 1px solid #ddd;
+
+  }
+  .faq-title{
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+  }

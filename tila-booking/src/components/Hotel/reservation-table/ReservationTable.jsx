@@ -136,11 +136,11 @@ const ReservationTable = () => {
         <table className="reservation-table">
           <thead>
             <tr>
-              <th style={{ width: '23%' }}>Room Type</th>
-              <th>Number of Guests</th>
-              <th>Price per Night</th>
-              <th style={{ width: '20%' }}>Choices</th>
-              <th style={{ width: '5%' }}>Select Rooms</th>
+              <th style={{ width: '30%' }}>Room Type</th>
+              <th  >Number of Guests</th>
+              <th  >Price per Night</th>
+              <th>Choices</th>
+              <th >Select Rooms</th>
             </tr>
           </thead>
           <tbody>
