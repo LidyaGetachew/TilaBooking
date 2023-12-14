@@ -18,6 +18,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import NearbyIcon from '@mui/icons-material/LocationOn';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
+import MapCard from "../shared/map/MapCard";
 const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
@@ -147,6 +148,9 @@ const Hotel = () => {
             ))}
           </div>
           <div className="hotelDetails">
+            <div className="mapCardContainer">
+               <MapCard mapImage={hotel.map.image} embedCode={hotel.map.code} />
+            </div>
             <div className="hotelDetailsTexts">
               <h1 className="hotelTitle">Stay in the heart of City</h1>
               <p className="hotelDesc">

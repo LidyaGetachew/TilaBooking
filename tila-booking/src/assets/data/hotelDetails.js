@@ -1,4 +1,4 @@
-
+import mapImage from "../images/mapImage1.png"
 const hotel = {
     title:"Tower Street Apartments",
     Address:"Elton St 125 New yourk",
@@ -210,7 +210,11 @@ const hotel = {
         question: "Is parking available at the hotel?",
         answer: "Yes, we have onsite parking available for guests. There may be a daily parking fee, so please check with our staff for more details."
       }
-    ]
+    ],
+    map:{
+      image:mapImage,
+      code:'<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.0691119099383!2d19.935227638234895!3d50.06626732015913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b62083e669f%3A0x1368bcceb7f3cf97!2sTower%20Street%20Apartment!5e0!3m2!1sen!2set!4v1702529736807!5m2!1sen!2set" width="800" height="1000" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+    }
 }
 
 export default hotel

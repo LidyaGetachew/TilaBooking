@@ -312,3 +312,7 @@
     font-weight: bold;
 
   }
+
+  .mapCardContainer {
+    position: relative;
+  }
