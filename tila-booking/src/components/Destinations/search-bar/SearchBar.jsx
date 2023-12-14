@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
-import "./searchbar.css";
+import React, { useState, useRef, useEffect } from 'react';
+import './searchbar.css';
 import { SearchOutlined } from '@mui/icons-material';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
+  const [showResults, setShowResults] = useState(false);
   const navigate = useNavigate();
+  const blurTimeoutRef = useRef(null);
 
   const destinations = [
     { id: 1, name: 'Addis Ababa' },
@@ -30,43 +32,56 @@ const SearchBar = () => {
   };
 
   const handleBlur = () => {
-    setIsFocused(false);
+    blurTimeoutRef.current = setTimeout(() => {
+      setShowResults(false);
+      setIsFocused(false);
+    }, 200);
   };
 
   const handleDestinationClick = (destination) => {
-    navigate("/hotel/list", {
+    clearTimeout(blurTimeoutRef.current);
+    navigate('/hotel/list', {
       state: {
         destination: destination.name,
         date: [
           {
             startDate: new Date(),
             endDate: new Date(),
-            key: 'selection'
-          }
+            key: 'selection',
+          },
         ],
         options: {
           adult: 1,
           children: 0,
           room: 1,
-        }
-      }
+        },
+      },
     });
   };
 
+  useEffect(() => {
+    return () => {
+      clearTimeout(blurTimeoutRef.current);
+    };
+  }, []);
+
   return (
     <>
-      <div className='input-wrapper'>
+      <div className="input-wrapper">
         <SearchOutlined />
         <input
-          placeholder='Enter Destination...'
+          placeholder="Enter Destination..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          onFocus={handleFocus}
+          onFocus={() => {
+            setIsFocused(true);
+            setShowResults(true);
+          }}
           onBlur={handleBlur}
         />
       </div>
-      {isFocused && (
-        <div className='search-results-list'>
+      {isFocused && showResults && (
+        <div className="search-results-list">
           {filteredDestinations.map((destination) => (
             <div
               className="single-search-result"
