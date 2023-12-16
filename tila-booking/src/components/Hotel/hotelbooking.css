@@ -4,6 +4,9 @@
     align-items: center;
     margin-top: 20px;
 }
+.custom-stepper .MuiStepLabel-root.Mui-active {
+    color: #ff0000; /* Set your desired color */
+  }
 .hotel-booking-wrapper{
     width: 100%;
     max-width: 1200px;
@@ -36,7 +39,7 @@
     flex-basis: 100%;
   }
   .form-section-container{
-    border: 1px solid #f0f0f0;
+    border: 1px solid #ebe8e8;
     border-radius: 4px;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -146,3 +149,40 @@
  .align-right{
     margin-left: auto;
  }
+.date-container{
+    margin-top: 10px;
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+ .date-div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+ }
+ .vertical-ruler {
+    width: 1px;
+    height: 50px;
+    background-color: var(--secondary-color); /* Set the color as per your preference */
+  }
+
+  .section-info-gap{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+  .price-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 0px 10px;
+
+  }
+  .payment-cancel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

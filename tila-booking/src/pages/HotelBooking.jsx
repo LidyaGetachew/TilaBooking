@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Stepper, Step, StepLabel, Button } from '@mui/material';
+import { Stepper, Step, StepLabel, Button ,Rating} from '@mui/material';
 import "../components/Hotel/hotelbooking.css"
 import { CarRental, CheckOutlined, HelpCenter, LocalTaxi, LocalTaxiOutlined } from '@mui/icons-material';
 
@@ -78,24 +78,110 @@ const HotelBooking = () => {
         const formattedHour = (hour % 12) || 12;
         return `${formattedHour}:00 ${meridiem}`;
       }
+      const customStyles = {
+        activeStepLabel: {
+          color: 'var(--secondary-color)', // Set your desired color
+        },
+      };
 
   return (
     <div className='hotel-booking'>
-
-    <div className='hotel-booking-wrapper'>
+      <div className='hotel-booking-wrapper'>
         <div className="stepper-wrapper">
-        <Stepper activeStep={activeStep}>
-            {steps.map((label) => (
-                <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-                </Step>
-            ))}
-        </Stepper>
+            <Stepper activeStep={activeStep} className="custom-stepper">
+                {steps.map((label) => (
+                    <Step key={label} >
+                    <StepLabel  sx={{
+                  color:  '#FF0000' }} >{label}</StepLabel>
+                    </Step>
+                ))}
+            </Stepper>
         </div>
         <div className='hotel-booking-form'>
-        <div className="hotel-summary">
-          Summary content
-        </div>
+            <div className="hotel-summary">
+                {/* side-sections */}
+                <div className='form-section-container'>
+                    <div className="hotel-details section-info-gap">
+                        <div>
+                            <span>Hotel &nbsp;</span>
+                            <Rating name="hotel-rating" value={5} max={5} precision={0.1} readOnly   sx={{ fontSize: '1rem' }}/>
+                            <div className='small-title'>Skylight In-Terminal Hotel</div>
+                        </div>
+                        <div className='small-detail-info'>
+                            <div>Bole, Bole, 1755 Addis Ababa, Ethiopia</div>
+                            <div>Excellent Location — 9.1</div>
+                            <div className="review-summary">
+                                <span className='rating-value'>7.4</span>
+                                <span>Good ·</span>
+                                <span className='gray-text'>364 reviews</span>
+                            </div>
+                            <div>
+                                <p className='amenity'>Pet friendly</p>
+                                <p className='amenity'>Free WiFi</p>
+                                <p className='amenity'>Restaurant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='form-section-container'>
+                    <div className="booking-details section-info-gap">
+                        <div className='small-title'>Your Booking Details</div>
+                        <div className='date-container small-detail-info'>
+                            <div className='date-div'>
+                                <div> Check-in:</div>
+                                <div><b>Sat, Dec 23, 2023,</b></div>
+                                <div className='gray-text'>From 12:00 AM</div>
+                            </div>
+                            <div class="vertical-ruler"></div>
+                            <div className='date-div'>
+                                <div>  Check-out:</div>
+                                <div><b>Wed, Dec 27, 2023,</b></div>
+                                <div className='gray-text'> Until 12:00 AM</div>
+                            </div>
+                        </div>
+                        <div>
+                            Total length of stay: <b>4 nights</b>
+                        </div>
+                          You selected
+                            <div className='small-detail-info'>
+                                <b>1 room for 2 adults</b>
+                            </div>
+                        </div>
+                </div>
+                <div className="form-section-container">
+                 <div className="price-details section-info-gap">
+                    <div className='small-title'>Your price summary</div>
+                    <div className='price-info'>
+                        <div className='medium-title'>Total</div>
+                        <div>
+                            <div className=''><b>US $648</b></div>
+                            <div className='gray-text small-detail-info'>Includes taxes and fees</div>
+                        </div>
+                    </div>
+                    <div>
+                       <div className='small-title'>Price information</div>
+                    </div>
+                         <p className='small-detail-info'>Includes US$129.60 in taxes and fees</p>
+
+                    </div>
+                </div>
+                <div className="form-section-container">
+                    <div className="payment-schedule section-info-gap">
+                        <div className="small-title">Your payment schedule</div>
+                        <div className="small-detail-info">You'll be charged a prepayment of the total price at any time.</div>
+                    </div>
+                </div>
+                <div className="form-section-container">
+                    <div className="section-info-gap">
+                        <div className="small-title">How much will it cost to cancel?</div>
+                        <div className='payment-cancel'>
+                            <div className="small-detail-info">If you cancel, you'll pay</div>
+                            <div className='small-detail-info'>US$648</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         <form onSubmit={handleSubmit}>
         <div className="hotel-form">
         <div>
@@ -334,9 +420,7 @@ const HotelBooking = () => {
                     name="arrivalTime"
                     value={formData.arrivalTime}
                     className='label-input-container'
-                    onChange={(e) =>
-                        setFormData({ ...formData, arrivalTime: e.target.value })
-                    }
+                    onChange={handleChange}
                     >
                   <option value="">-- Select Time --</option>
                   <option value="don't know">I don't know</option>
@@ -355,7 +439,7 @@ const HotelBooking = () => {
         </form>
         </div>
     </div>
-            </div>
+ </div>
   )
 }
 
