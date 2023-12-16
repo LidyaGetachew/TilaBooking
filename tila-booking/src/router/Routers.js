@@ -12,6 +12,7 @@ import Hotels from '../pages/Hotels'
 import Hotel from "../pages/Hotel"
 import HotelList from "../components/Hotel/HotelList/List"
 import Destinations from '../pages/Destinations'
+import HotelBooking from '../pages/HotelBooking'
 
 
 const Routers = () => {
@@ -23,6 +24,7 @@ const Routers = () => {
          <Route path='/services/tours' element={<Tours/>} />
          <Route path='/services/hotels' element={<Hotels/>} />
          <Route path='/services/hotels/hotel' element={<Hotel/>} />
+         <Route path='/services/hotels/hotel/booking' element={<HotelBooking/>} />
          <Route path='/destinations' element={<Destinations />} />
          <Route path='/tours/:id' element={<TourDetails/>} />
          <Route path='/login' element={<Login/>} />
