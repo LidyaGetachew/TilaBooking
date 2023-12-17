@@ -24,7 +24,7 @@
   }
   
   .hotel-summary {
-    flex: 1 0 30%;
+    flex: 0 0 30%;
   }
   
   .hotel-form {
@@ -33,6 +33,9 @@
   @media (max-width: 768px) {
     .hotel-booking-form {
       flex-wrap: wrap;
+    }
+    .hotel-summary{
+      flex:1 00 30%;
     }
   }
   .flex-on-new-line{
@@ -43,6 +46,7 @@
     border-radius: 4px;
     padding: 1rem;
     margin-bottom: 1rem;
+    width: 100%;
     /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); */
       
   }
@@ -118,6 +122,10 @@
   .checkbox-container > .last-child-icon{
     margin-left:  auto;
   }
+  .short-label{
+    width: 100%
+    /* align-self: left; */
+  }
 
   .form-section-container textarea {
     width: 100%;
@@ -186,3 +194,8 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .small-width-input{
+    width:50%;
+  }
+ 
