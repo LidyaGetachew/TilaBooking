@@ -1,0 +1,9 @@
+.tour-small-image-card{
+    width: 100%;
+    border-radius: 2px;
+}
+
+.price-values{
+    display: flex;
+    justify-content: space-between;
+}
