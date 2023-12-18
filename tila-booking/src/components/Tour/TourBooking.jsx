@@ -3,6 +3,7 @@ import { Stepper, Step, StepLabel, Button ,Rating} from '@mui/material';
 import "../Hotel/hotelbooking.css"
 import "./tourBooking.css"
 import tourImage from "../../assets/images/tour-img01.jpg"
+import PaymentForm from '../../shared/payment/PaymentForm';
 
 const TourBooking = () => {
 
@@ -28,6 +29,7 @@ const TourBooking = () => {
             firstName: '',
             lastName: '',
             email: '',
+            telephone:'',
             cardHolderName:'',
             cardType:'',
             cardNumber:'',
@@ -53,24 +55,7 @@ const TourBooking = () => {
         // Perform form submission logic here
       };
       
-      function getThreeLetterMonthNames() {
-        const months = [
-          'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-        ];
       
-        return months;
-      }
-      function getFutureYears() {
-        const currentYear = new Date().getFullYear();
-        const futureYears = [];
-      
-        for (let i = 0; i <= 20; i++) {
-          futureYears.push(currentYear + i);
-        }
-      
-        return futureYears;
-      }
 
   return (
     <div className='hotel-booking'>
@@ -173,7 +158,8 @@ const TourBooking = () => {
             {/* end of step 2 */}
 
             {/* third step */}
-            {activeStep === 2 && ( <div className='payment details '>
+            {activeStep === 2 && ( 
+            <div className='payment details '>
                 <div className="form-section-container">
                 <div className='section-info-gap'>
                     <div className='medium-title'>Save your details</div>
@@ -194,7 +180,7 @@ const TourBooking = () => {
                     </div>
                 </div>
                 </div>
-                <div className='form-section-container'>
+                {/* <div className='form-section-container'>
                 <div className='section-info-gap'>
                     <div className='medium-title'>How do you want to pay?</div>
                     <div className='label-input-container'>
@@ -238,7 +224,9 @@ const TourBooking = () => {
                         <div className='small-detail-info'>You don't need to enter a CVC code for this booking.</div>
                     </div>
                     </div>
-                </div>
+                </div> */}
+                <PaymentForm/>
+                
                 <div className='button-container'>
                     <button className='major-button full-width' onClick={handleNextStep}>Complete Booking</button>
                 </div>

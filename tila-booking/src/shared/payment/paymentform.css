@@ -1,0 +1,46 @@
+.payment-type-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap:10px;
+
+}
+.custom-radio-button {
+   
+}
+.custom-radio-button label{
+    height: 100%;
+    width: 80%;
+    border: 1px solid blue;
+}
+.radioLabel {
+    display: block;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    width:20%;
+    height: 70px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .radioLabel input[type="radio"] {
+    float: left;
+    margin-left: -20px;
+    margin-top: 4px;
+    margin-right: 8px;
+  }
+  .radioLabel img{
+    width:50%;
+    height: auto;
+    margin-left: 5px;
+  }
+
+
+.selected{
+    border: 2px solid var(--secondary-color); /* Adjust border color and thickness as needed */
+
+}
+.paypal ul{
+    list-style-type: disc;
+}
