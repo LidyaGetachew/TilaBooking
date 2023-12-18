@@ -1,5 +1,5 @@
 import "../components/Hotel/hotel.css"
-import React from "react";
+import React ,{useState,useEffect,useRef}from "react";
 import hotel from "../assets/data/hotelDetails"
 import LinearProgress from '@mui/material/LinearProgress';
 import SlideCards from '../shared/SlideCards';
@@ -10,7 +10,6 @@ import {
   faCircleXmark,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
 import NewsLetter from "../shared/Newsletter";
 import ReservationTable from "../components/Hotel/reservation-table/ReservationTable";
 import { HotelSharp,QuestionAnswer,CheckCircle, RestaurantMenu,  Attractions,  AirplaneTicketOutlined, TourSharp, CheckCircleOutline, CheckSharp, Checklist, CheckCircleRounded, CheckCircleOutlineRounded, CheckCircleOutlined, AccessTime, East, West, Info, ChildCare, Person, Pets, Payment, Payments  } from "@mui/icons-material";
@@ -19,6 +18,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import NearbyIcon from '@mui/icons-material/LocationOn';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
 import MapCard from "../shared/map/MapCard";
+import { secondsInDay } from "date-fns/constants";
 const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
@@ -29,7 +29,73 @@ const Hotel = () => {
     setSlideNumber(i);
     setOpen(true);
   };
+  const hotelDetailList= {
+      id: 1,
+      name: 'Dulux Room',
+      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      slug:'new-luxury-laptop',
+      photo:'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      price:19999,
+      images:[
+        {
+          src:'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+          src:'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+          src:'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+          src:'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+          src:'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+          src:'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+          src:'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+          src:'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+          src:'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+          src:'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        }
+        
+      ],
+      "colors":['#2287fa','#f71b1b','green'],
+      infos:[
+      {
+        title:"highlights",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        title:"materials",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        title:"how to use",
+        content:"consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        title:"pro tips",
+        content:"sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      ],
+      discount:20,
+      sold:52,
+      catagory:'laptop',
+      brand:'apple'
 
+      
+    }
+  
   const handleMove = (direction) => {
     let newSlideNumber;
 
@@ -96,31 +162,124 @@ const Hotel = () => {
           ));
         }
       };
+const [slideIndex,setSlideIndex]=useState(1);
 
+
+const [width,setWidth]=useState(0);
+const [start,setStart]=useState(0);
+const [change,setChange]=useState(9);
+
+const slideRef= useRef();
+
+useEffect(()=>{
+if(!slideRef.current) return;
+const scrollWidth= slideRef.current.scrollWidth;
+const childrenElementCount= slideRef.current.childrenElementCount;
+const width=scrollWidth / childrenElementCount;
+},[])
+
+useEffect(()=>{
+  if(!slideRef.current ||width) return;
+  const numOfThumb=Math.round(slideRef.current.offserWidth /width);
+  slideRef.current.scrollLeft=slideIndex>numOfThumb?(slideIndex-1):0
+  },[width])
+function plusSlides(n){
+  setSlideIndex(prev=>prev + n);
+  slideShow(slideIndex+ n);
+ 
+}
+//Drag
+function dragStart(e){
+  setStart(e.clientX)
+}
+function dragOver(e){
+  let touch=e.clientX;
+  setChange(start -touch);
+}
+function dragEnd(e){
+  if(change>0){
+    slideRef.current.scrollLeft+=width;
+  }else{
+    slideRef.current.scrollLeft-=width;
+  }
+}
+
+function slideShow(n){
+
+  if(n>hotelDetailList.images.length){setSlideIndex(1)};
+  if(n<1){setSlideIndex(hotelDetailList.images.length)};
+  setOpen(true);
+}
   return (
     <div>
       <div className="hotelContainer">
-        {open && (
+      {open && (
           <div className="slider">
             <FontAwesomeIcon
               icon={faCircleXmark}
               className="close"
               onClick={() => setOpen(false)}
             />
-            <FontAwesomeIcon
-              icon={faCircleArrowLeft}
-              className="arrow"
-              onClick={() => handleMove("l")}
-            />
-            <div className="sliderWrapper">
-              <img src={photos[slideNumber].src} alt="" className="sliderImg" />
-            </div>
-            <FontAwesomeIcon
-              icon={faCircleArrowRight}
-              className="arrow"
-              onClick={() => handleMove("r")}
-            />
+        <section className="room-details">
+          <div className="room-page-img">
+          {
+            hotelDetailList.images.map((image,index)=>(
+              <div key={index} className="mySlides"
+               style={{display:(index + 1) === slideIndex?"block":"none"}}>
+                <div className="numbertext">{index+1} / {hotelDetailList.images.length}</div>
+              <img src={image.src} alt="" />
+              </div>
+            ))
+          }
+          <a href="#!" className="prev" onClick={()=>plusSlides(-1)} >&#10094;</a>
+          <a href="#!" className="next" onClick={()=>plusSlides(1)}>&#10095;</a>
+          <div className="slider-img" draggable={true} ref={slideRef}
+          onDragStart={dragStart} onDragOver={dragOver} onDragEnd={dragEnd}>
+            {
+                hotelDetailList.images.map((image,index)=>(
+                  <div key={index} className={`slider-box ${index +1 ===slideIndex &&'active'}`}
+                  onClick={()=>setSlideIndex(index+1)}>
+                  <img src={image.src} alt="" />
+                  </div>
+                ))
+            }
           </div>
+          </div>
+
+          <div className="room-page-details">
+            <strong>{hotelDetailList.name}</strong>
+            <p className="room-category">
+              {hotelDetailList.brand} - {hotelDetailList.catagory}
+            </p>
+            <p className="room-price">
+              ${Math.round(hotelDetailList.price -hotelDetailList.price*hotelDetailList.discount /100)}<del>{hotelDetailList.price}$</del>
+            </p>
+            <p className="small-desc">{hotelDetailList.desc}</p>
+            <div className="room-options">
+
+              {
+               hotelDetailList.colors.map((color)=>(
+                <div key={color}>
+                    <button></button>
+                </div>
+              ))
+              }
+            </div>
+            <div className="room-page-offer">
+           <i class="fa fa-tag"/>{hotelDetailList.discount}% Discount
+            </div>
+            {/* <div className="room-sold">
+              <img src="https://th.bing.com/th/id/OIP.DCiTkKCLh9H-VAgEhv4pMgHaHa?rs=1&pid=ImgDetMain" alt="SoldIcon" />
+               <strong>{hotelDetailList.sold}<span>Products Sold</span> </strong>
+            </div> */}
+            <div className="cart-btns">
+            <a href="#!" className='add-book'>Book</a>
+          <a href="#!" className='book-now'>Book Now</a>
+            </div>
+          </div>
+
+        </section >
+         </div>
         )}
         <div className="hotelWrapper">
           <button className="bookNow">Reserve or Book Now!</button>
