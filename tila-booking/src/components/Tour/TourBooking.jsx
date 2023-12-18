@@ -71,6 +71,51 @@ const TourBooking = () => {
             </Stepper>
         </div>
         <div className='hotel-booking-form'>
+                <div className="hotel-summary">
+    
+                    {/* side-sections */}
+                    
+                    <div className="form-section-container">
+                     <div className="price-details section-info-gap">
+                        <div className=''>
+                            <img src={tourImage} alt='tour image' className='tour-small-image-card' />
+                            <div>
+                                <div className="small-title">Admission to the London Eye</div>
+                                <div className="gray-text">Tue, Dec 19 02:00 PM</div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div className='small-title'>Your price summary</div>
+                        <div>
+                                <div className='medium-title'>3 x Standard Experience (PEAK)</div>
+    
+                            <div className='price-values'>
+                            <div>1 x Adult (age 16+)</div>
+                            <div>US$42.11</div>
+                            </div>
+    
+                            <div  className='price-values'>
+                            <div>1 x Child (age 2–15)</div>
+                            <div>US$37.01</div>
+                            </div>
+    
+                            <div  className='price-values'>
+                            <div>1 x Child under 2</div>
+                            <div>US$0</div>
+                            </div>
+                        </div>
+                        <div className='price-info'>
+                            <div className='medium-title'>Total</div>
+                            <div>
+                                <div className=''><b>US$79.12</b></div>
+                                <div className='gray-text small-detail-info'>Includes taxes and fees</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                {/* end of side section */}
+            
         <div className="hotel-form ">
         <form onSubmit={handleSubmit} >
             {/* second step */}
@@ -233,51 +278,6 @@ const TourBooking = () => {
             </div>)}
      </form>    
         </div>
-            <div className="hotel-summary">
-
-                {/* side-sections */}
-                
-                <div className="form-section-container">
-                 <div className="price-details section-info-gap">
-                    <div className=''>
-                        <img src={tourImage} alt='tour image' className='tour-small-image-card' />
-                        <div>
-                            <div className="small-title">Admission to the London Eye</div>
-                            <div className="gray-text">Tue, Dec 19 02:00 PM</div>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div className='small-title'>Your price summary</div>
-                    <div>
-                            <div className='medium-title'>3 x Standard Experience (PEAK)</div>
-
-                        <div className='price-values'>
-                        <div>1 x Adult (age 16+)</div>
-                        <div>US$42.11</div>
-                        </div>
-
-                        <div  className='price-values'>
-                        <div>1 x Child (age 2–15)</div>
-                        <div>US$37.01</div>
-                        </div>
-
-                        <div  className='price-values'>
-                        <div>1 x Child under 2</div>
-                        <div>US$0</div>
-                        </div>
-                    </div>
-                    <div className='price-info'>
-                        <div className='medium-title'>Total</div>
-                        <div>
-                            <div className=''><b>US$79.12</b></div>
-                            <div className='gray-text small-detail-info'>Includes taxes and fees</div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            {/* end of side section */}
-        
         
         </div>
     </div>
