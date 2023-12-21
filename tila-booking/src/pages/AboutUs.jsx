@@ -35,27 +35,6 @@ const AboutUs = () => {
       <section>
         <Team/>
       </section>
-
-      <section>
-        <div>
-          <h2>Testimonials</h2>
-          {/* Testimonials component */}
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <h2>Our Services</h2>
-          {/* Services component */}
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <h2>Our Brand Story</h2>
-          {/* Brand Story component */}
-        </div>
-      </section>
     </div>
   );
 };
