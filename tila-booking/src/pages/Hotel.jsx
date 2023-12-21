@@ -5,8 +5,6 @@ import LinearProgress from '@mui/material/LinearProgress';
 import SlideCards from '../shared/SlideCards';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
   faCircleXmark,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
