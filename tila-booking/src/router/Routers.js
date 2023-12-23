@@ -14,7 +14,6 @@ import HotelList from "../components/Hotel/HotelList/List"
 import Destinations from '../pages/Destinations'
 import HotelBooking from '../pages/HotelBooking'
 import TourBooking from '../components/Tour/TourBooking'
-import AboutUs from '../pages/AboutUs'
 
 
 const Routers = () => {
@@ -35,8 +34,6 @@ const Routers = () => {
          <Route path='/thank-you' element={<ThankYou/>} />
          <Route path='/tours/search' element={<SearchResultList/>} />
          <Route path='/hotel/list' element={<HotelList/>} />
-         <Route path='/about' element={<AboutUs/>} />
-
 
       </Routes>
    )
