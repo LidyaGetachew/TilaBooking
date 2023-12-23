@@ -1,7 +1,7 @@
 import mapImage from "../images/mapImage1.png"
 const hotel = {
     title:"Tower Street Apartments",
-    Address:"Elton St 125 New yourk",
+    Address:"Elton St 125 New york",
     distance: "500m",
     minPrice:"114",
     highlight:"Book a stay over $114 at this property and get a free airport taxi",

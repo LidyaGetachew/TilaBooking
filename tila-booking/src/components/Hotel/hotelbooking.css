@@ -148,6 +148,7 @@
     background-color: var(--secondary-color);
     border-radius: 5px;
     color: white;
+    height:fit-content;
     border: none;
     cursor: pointer;
  }
