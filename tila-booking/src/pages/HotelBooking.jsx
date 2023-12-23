@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import { Stepper, Step, StepLabel, Button ,Rating} from '@mui/material';
 import "../components/Hotel/hotelbooking.css"
 import { CarRental, CheckOutlined, HelpCenter, LocalTaxi, LocalTaxiOutlined } from '@mui/icons-material';
-import PaymentForm from '../shared/payment/PaymentForm';
 
 const HotelBooking = () => {
 
@@ -495,7 +494,7 @@ const HotelBooking = () => {
                     </div>
                 </div>
                 </div>
-                {/* <div className='form-section-container'>
+                <div className='form-section-container'>
                 <div className='section-info-gap'>
                     <div className='medium-title'>How do you want to pay?</div>
                     <div className='label-input-container'>
@@ -539,8 +538,7 @@ const HotelBooking = () => {
                         <div className='small-detail-info'>You don't need to enter a CVC code for this booking.</div>
                     </div>
                     </div>
-                </div> */}
-                <PaymentForm />
+                </div>
                 <div className='button-container'>
                     <button className='major-button align-right' onClick={handleNextStep}>Complete Booking</button>
                 </div>
