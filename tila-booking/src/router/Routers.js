@@ -16,6 +16,7 @@ import HotelBooking from '../pages/HotelBooking'
 import TourBooking from '../components/Tour/TourBooking'
 import AboutUs from '../pages/AboutUs'
 import CreateHotel from '../components/AdminPage/Hotel/Create'
+import ContactPage from '../pages/ContactUs'
 
 
 const Routers = () => {
@@ -37,6 +38,7 @@ const Routers = () => {
          <Route path='/tours/search' element={<SearchResultList/>} />
          <Route path='/hotel/list' element={<HotelList/>} />
          <Route path='/about' element={<AboutUs/>} />
+         <Route path='/contact' element={<ContactPage/>} />
          <Route path='/create' element={<CreateHotel/>} />
 
 

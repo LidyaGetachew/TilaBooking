@@ -23,7 +23,7 @@ const nav__links = [
       display: 'About'
    },
    {
-      path: '/contact us',
+      path: '/contact',
       display: 'ContactUs'
    },
 ]
