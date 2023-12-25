@@ -1,3 +1,11 @@
+.create-hotel-container{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 10px 20px;
+
+}
+
 .admin-form-section-container{
     border: 1px solid var(--secondary-color);
     border-radius: 4px;
@@ -12,4 +20,27 @@
   }
   .form-title{
     flex-basis: 100%;
+  }
+  .file-upload-box{
+    border: 2px solid var(--secondary-color);
+    padding: 5px;
+    background-color: rgb(192, 190, 187);
+    cursor: pointer;
+
+  }
+  .file-upload-box:hover{
+    cursor: pointer;
+  }
+
+  .navigation-buttons-container{
+    display: flex;
+    width:100%;
+    padding:10px 20px;
+    justify-content: space-between;
+  }
+  .crud-title{
+    width: 100%;
+    align-self: center;
+    margin-bottom: 20px;
+    padding: 5px 10px;
   }

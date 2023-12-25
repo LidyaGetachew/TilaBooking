@@ -185,9 +185,9 @@ const hotel = {
           },
           "Age restriction": "The minimum age for check-in is 18",
           "Pets": "Pets are allowed. Charges may apply.",
-          "Accepted payment methods": {"cards": "Mastercard, Visa, UnionPay credit card, American Express\nCash is not accepted",
-                                      "Reservation": "Skylight In-Terminal Hotel accepts these cards and reserves the right to temporarily hold an amount prior to arrival."}
-        
+          "Accepted payment methods": {
+            "cards": "Mastercard, Visa, UnionPay credit card, American Express\nCash is not accepted",
+             "Reservation": "Skylight In-Terminal Hotel accepts these cards and reserves the right to temporarily hold an amount prior to arrival."}  
       },
     faqs: [
       {
