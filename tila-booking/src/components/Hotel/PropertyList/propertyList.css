@@ -4,6 +4,11 @@
     display: flex;
     justify-content: space-between;
     gap:20px;
+    text-decoration: none;
+}
+.list-link{
+    text-decoration: none;
+    color:inherit
 }
 .pListItem{
     flex:1;

@@ -6,7 +6,7 @@ import logo from '../../assets/images/logo.png'
 
 const quick__links = [
    {
-      path: '/home',
+      path: '/home#hero-section',
       display: 'Home'
    },
    {
@@ -14,14 +14,14 @@ const quick__links = [
       display: 'About'
    },
    {
-      path: '/tours',
+      path: '/services/tours',
       display: 'Tours'
    },
 ]
 
 const quick__links2 = [
    {
-      path: '/gallery',
+      path: '/home#gallery-section',
       display: 'Gallery'
    },
    {
@@ -47,22 +47,22 @@ const Footer = () => {
                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.</p>
                      <div className="social__link d-flex align-items-center gap-4">
                         <span>
-                           <Link to='#'>
+                           <Link to='https://youtube.com'>
                               <i class='ri-youtube-line'></i>
                            </Link>
                         </span>
                         <span>
-                           <Link to='#'>
+                           <Link to='https://github.com'>
                               <i class='ri-github-fill'></i>
                            </Link>
                         </span>
                         <span>
-                           <Link to='#'>
+                           <Link to='https://facebook.com'>
                               <i class='ri-facebook-circle-line'></i>
                            </Link>
                         </span>
                         <span>
-                           <Link to='#'>
+                           <Link to='https://instagram.com'>
                               <i class='ri-instagram-line'></i>
                            </Link>
                         </span>

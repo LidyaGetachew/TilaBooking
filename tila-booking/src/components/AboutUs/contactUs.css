@@ -35,6 +35,13 @@
 .socials-section{
     flex-basis: 100%;
 }
+.social-icon {
+    color:var(--secondary-color) /* Apply custom color here */
+  }
+  
+  .social-icon:hover {
+    color: inherit; /* Use the real color on hover */
+  }
 
 @media (max-width: 900px) {
     .contact-us-container {

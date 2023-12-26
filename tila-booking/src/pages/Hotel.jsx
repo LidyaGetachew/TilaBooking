@@ -19,7 +19,9 @@ import NearbyIcon from '@mui/icons-material/LocationOn';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
 import MapCard from "../shared/map/MapCard";
 import { secondsInDay } from "date-fns/constants";
+import { useNavigate } from "react-router-dom";
 const Hotel = () => {
+  const navigate = useNavigate()
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
 
@@ -273,8 +275,8 @@ function slideShow(n){
                <strong>{hotelDetailList.sold}<span>Products Sold</span> </strong>
             </div> */}
             <div className="cart-btns">
-            <a href="#!" className='add-book'>Book</a>
-          <a href="#!" className='book-now'>Book Now</a>
+            <a href="/services/hotels/hotel/booking" className='add-book'>Book</a>
+          <a href="/services/hotels/hotel/booking" className='book-now'>Book Now</a>
             </div>
           </div>
 
@@ -282,7 +284,7 @@ function slideShow(n){
          </div>
         )}
         <div className="hotelWrapper">
-          <button className="bookNow">Reserve or Book Now!</button>
+          <button onClick={()=> navigate('/services/hotels/hotel/booking')} className="bookNow">Reserve or Book Now!</button>
           <h1 className="hotelTitle">{hotel.title}</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
@@ -325,7 +327,7 @@ function slideShow(n){
               <h2>
                 <b>$945</b> (9 nights)
               </h2>
-              <button>Reserve or Book Now!</button>
+              <button onClick={()=>navigate("/services/hotels/hotel/booking")}>Reserve or Book Now!</button>
             </div>
           </div>
         <div className="popular-facilities">

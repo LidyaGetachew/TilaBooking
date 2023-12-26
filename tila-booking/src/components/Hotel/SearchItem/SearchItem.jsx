@@ -3,9 +3,10 @@ import hotelImg2  from "../../../assets/images/hotelImg2.jpg"
 import hotelImg3  from "../../../assets/images/hotelImg3.jpg"
 import React from "react";
 import './SearchItem.css'
-
+import { useNavigate } from "react-router-dom";
 
 const SearchItem = () => {
+  const navigate = useNavigate()
   return(
     <div className="searchItem">
       <img src={hotelImg1} 
@@ -34,7 +35,7 @@ const SearchItem = () => {
         <div className="siDetailTexts">
             <span className="siPrice">$123</span>
             <span className="siTaxOp">Include taxes and fees</span>
-            <button className="siCheckButton">See availability</button>
+            <button onClick={()=>navigate('/services/hotels/hotel')} className="siCheckButton">See availability</button>
 
         </div>
       </div>

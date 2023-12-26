@@ -6,13 +6,27 @@ import {format} from "date-fns"
 import './list.css'
 
 const HotelList = () => {
+   const mockState =   {
+      destination: "Addis Abeba",
+      date: [
+        {
+          startDate: new Date(),
+          endDate: new Date(),
+          key: 'selection'
+        }
+      ],
+      options: {
+        adult: 1,
+        children: 0,
+        room: 1,
+      }
+    }
   const location = useLocation();
-  const [destination ,setDestination]= useState(location.state.destination || "")
-  const [date ,setDate]= useState(location.state.date || new Date())
+  const [destination ,setDestination]= useState((location.state && location.state.destination) || mockState.destination)
+  const [date ,setDate]= useState((location.state && location.state.date) || mockState.date )
   const [openDate ,setOpenDate]= useState(false)
   
-  const [options ,setOptions]= useState(location.state.options || "")
-
+  const [options ,setOptions]= useState((location.state && location.state.options) || mockState.options)
   return (
 <div className="listContainer">
     <div className="listWrapper">

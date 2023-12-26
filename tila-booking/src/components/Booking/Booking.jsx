@@ -32,30 +32,30 @@ const Booking = ({ tour, avgRating }) => {
    const handleClick = async e => {
       e.preventDefault()
       console.log(booking)
+      navigate('/tours/booking')
+      // try {
+      //    if (!user || user === undefined || user === null) {
+      //       return alert('Please sign in')
+      //    }
 
-      try {
-         if (!user || user === undefined || user === null) {
-            return alert('Please sign in')
-         }
+      //    const res = await fetch(`${BASE_URL}/booking`, {
+      //       method: 'post',
+      //       headers: {
+      //          'content-type': 'application/json'
+      //       },
+      //       credentials: 'include',
+      //       body: JSON.stringify(booking)
+      //    })
 
-         const res = await fetch(`${BASE_URL}/booking`, {
-            method: 'post',
-            headers: {
-               'content-type': 'application/json'
-            },
-            credentials: 'include',
-            body: JSON.stringify(booking)
-         })
+      //    const result = await res.json()
 
-         const result = await res.json()
-
-         if(!res.ok) {
-            return alert(result.message)
-         }
-         navigate('/thank-you')
-      } catch (error) {
-         alert(error.message)
-      }   
+      //    if(!res.ok) {
+      //       return alert(result.message)
+      //    }
+      //    navigate('/thank-you')
+      // } catch (error) {
+      //    alert(error.message)
+      // }   
    }
 
    return (

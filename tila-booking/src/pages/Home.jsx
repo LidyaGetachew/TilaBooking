@@ -25,7 +25,7 @@ const Home = () => {
          <Container>
             <Row>
                <Col lg='4'>
-                  <div className="hero__content">
+                  <div className="hero__content" id='hero-section'>
                      <div className="hero__subtitle d-flex align-items-center">
                         <Subtitle subtitle={'Embark on Extraordinary Experiences'} />
                         <img src={worldImg} alt="" />
@@ -132,7 +132,7 @@ const Home = () => {
       {/* ========== EXPERIENCE SECTION END ============== */}
 
       {/* ========== GALLERY SECTION START ============== */}
-      <section>
+      <section id='gallery-section'>
          <Container>
             <Row>
                <Col lg='12'>

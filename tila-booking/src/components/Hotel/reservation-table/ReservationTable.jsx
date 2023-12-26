@@ -3,7 +3,7 @@ import { TableBody, TableCell, TableContainer, TableHead, TableRow, FormControl,
 import { Container,Table} from 'reactstrap';
 import "./reservation-table.css"
 import PersonIcon from '@mui/icons-material/Person';
-
+import { useNavigate } from 'react-router-dom';
 const roomData = [
     {
       roomId:1,
@@ -80,6 +80,8 @@ const roomData = [
   ];
 
 const ReservationTable = () => {
+
+    const navigate = useNavigate()
     const [selectedRooms, setSelectedRooms] = useState([]);
     const [reserveColumnRendered, setReserveColumnRendered] = useState(false);
     const calculateTotalVariants = () => {
@@ -218,7 +220,7 @@ const ReservationTable = () => {
                     {calculateTotalSelectedRooms()} rooms for <br />
                        <b>${calculateTotalCost()}</b> 
                             </div>
-                            <Button variant="contained" color="primary">
+                            <Button onClick={()=>navigate('/services/hotels/hotel/booking')}variant="contained" color="primary">
                             I'll Reserve
                             </Button>
                      </div>
